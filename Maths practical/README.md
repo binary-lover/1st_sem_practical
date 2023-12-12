@@ -61,7 +61,7 @@
         eqn2:read("equation 2 is=");
         eqn3:read("equation 3 is=");
         eqn4:read("equation 4 is=");
-        
+
         block(D:augcoefmatrix([eqn1,eqn2,eqn3,eqn4],[x,y,z,a]), 
             S:echelon(D),
         [p.q],X:[x,y,z,a, 1], [p,q]:matrix_size(S),
@@ -137,7 +137,7 @@
         c:matrix([c1],[c2],[c3]);
 
         v:V.c;
-    ~~~
+
 
 #
 
@@ -159,5 +159,4 @@
         F:[-(2/3),2^2/3,1/3,0]/E;
     ~~~
         Orthonormal_Basis:matrix(B,D,F);
-    ~~~
 
