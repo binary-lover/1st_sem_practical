@@ -160,3 +160,106 @@
     ~~~
         Orthonormal_Basis:matrix(B,D,F);
 
+#
+
+* Practical 9: - Check the diagonalizable property of matrices and find the corresponding eigenvalue and verify the Cayley- Hamilton theorem.
+
+     ~~~
+      load(eigen);
+     ~~~
+      load(matrix);
+     ~~~
+      A: matrix([1,2,1],[6,-1,0],[-1,-2,-1]);
+     ~~~
+      nondiagonalizable(A);
+     ~~~
+      load(nchrpl);
+     ~~~
+      ncharpoly(A,lambda);
+
+#
+
+* Practical 10: - Application of Linear algebra: Coding and decoding of messages using nonsingular matrices
+
+  ~~~
+   /* Defining a nonsingular matrix for encoding and decoding */
+
+   A: matrix([2,3],[1,4]);
+
+   /* Define a message vector */
+   message: matrix([1],[2]);
+
+   /*Encoding: Multiply the message by the nonsingular matrix*/
+   encoded_message : A.message;
+
+   /* Decoding: Multipying the encoded message by the non-singular matrix */
+   A_inverse : invert(A);
+   decoded_message: A_inverse.encoded_message;
+
+   /*Display the results */
+   print("Output Message:");
+   print(message);
+   print("Encoded Message");
+   print(encoded_message);
+   print("Decoded Message");
+   print(decoded_message);
+
+#
+
+* Practical 11: - Compute Gradient of a scalar field.
+
+  ~~~
+
+  /* Defining the Variables */
+
+  load(vector);
+
+  /* Define the scalar field in terms of variables x,y and z */
+  scalar_field: x^2 + 2*y - 3*z;
+
+  /*Compute the gradient of the scalar field*/
+  gradient_field : gradient(scalar_field,[x,y,z]);
+
+  /* Display the gradient field */
+  print("Gradient of the Scalar Field");
+  print(gradient_field);
+  
+#
+
+* Practical 12: - Compute Divergence of a vector field.
+
+  ~~~
+
+  /* Load Vector */
+
+  load("vector");
+  /* Define the Variables */
+  [wx,wy,wz]:[x,y,z];
+
+  /* Define the vector field in terms of variables x,y and z */
+  vector_field: [2*x*y, x^2-z, y^2*z];
+  /*Compute the divergence of the vector field*/
+  Divergence : div(vector_field,wx,wy,wz);
+
+  /* Display the curl vector */
+  print("Divergence of the Vector Field");
+  print(Divergence);
+  
+#
+
+* Practical 13: - Compute Divergence of a vector field.
+
+  ~~~
+  /* Load Vector */
+
+  /* Define the Variables */
+  [wx,wy,wz]:[x,y,z];
+
+  /* Define the vector field in terms of variables x,y and z */
+  vector_field: [2*y, 3*x*z, x^2-y];
+  /*Compute the curl of the vector field*/
+  c: curl(vector_field,wx,wy,wz);
+
+  /* Display the curl vector */
+  print("Curl of the Vector Field");
+  print(c);
