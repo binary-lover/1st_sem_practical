@@ -1,0 +1,52 @@
+;1) *******AND*******
+INP
+STA NUM
+INP
+AND NUM
+OUT
+HLT
+NUM: .data 1 0 
+
+;2) ********OR*******
+;INP
+;STA NUM
+;INP
+;OR NUM
+;OUT
+;HLT
+;NUM: .data 1 0 
+
+;3) *******NOT
+;INP
+;NOT
+;OUT
+;HLT
+
+;4) ********XOR*******
+;INP
+;STA NUM
+;INP
+;XOR NUM
+;OUT
+;HLT
+;NUM: .data 1 0 
+
+;5) ********NOR*******
+;INP
+;STA NUM
+;INP
+;NOR NUM
+;OUT
+;HLT
+;NUM: .data 1 0 
+
+;6) ********NAND*******
+;INP
+;STA NUM
+;INP
+;NAND NUM
+;OUT
+;HLT
+;NUM: .data 1 0 
+ 
+ 

@@ -1,0 +1,22 @@
+; This program will take input of integers and add them
+; until a negative number is encounterred.
+
+START:  READ
+        
+        JMPN DONE
+        
+        ADD SUM
+        
+        STA SUM 
+
+        JUMP START
+
+
+DONE:   LDA SUM
+        
+        WRITE
+
+        STOP 
+
+SUM: .data 2 0
+        

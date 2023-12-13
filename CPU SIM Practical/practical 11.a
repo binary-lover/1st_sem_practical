@@ -1,0 +1,21 @@
+;Write an assembly program that reads in integers and adds them together; 
+;until zero is read in. Then it outputs the sum. 
+
+START:  READ        ; read input
+        
+        JMPZ DONE   ; if n = 0 then jump to DONE
+        
+        ADD SUM     
+        
+        STA SUM 
+
+        JUMP START   ; jump to start to read again
+
+
+DONE:   LDA SUM     ; load final sum
+        
+        WRITE
+
+        STOP 
+
+SUM: .data 2 0
